@@ -298,7 +298,7 @@ void ShellSort(vector<int>& v1) {
     cout << "\n\nSHELL SORT\n";
     //cout << "CODE THIS\n";
     //vector<int> shell = { 45,35,80,75,60,90,70 };
-    vector<int> shell = { 45,35,80,75,60,90,70,75,55,90,85,34,45,62,57 };
+    //vector<int> shell = { 45,35,80,75,60,90,70,75,55,90,85,34,45,62,57 };
     int n = v1.size();
     int temp, j;
     for (int gap = n / 2; gap > 0; gap /= 2) {
@@ -350,5 +350,4 @@ void RadixSort(vector<int>& v1) {
 
     vector<vector<int>> buckets;
 
-   
 }

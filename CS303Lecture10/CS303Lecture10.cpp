@@ -23,22 +23,26 @@ int main() {
 
 
 	//PART 2 - SORTS
-	vector<int> select = { 15,20,5,6,3,10,1 };
-	vector<int> insert = { 15,20,5,6,3,10,1 };
-	vector<int> bubble = { 15,20,5,6,3,10,1 };
-	vector<int> quick = { 15,20,5,6,3,10,1 };
-	vector<int> merge = { 15,20,5,6,3,10,1 };
-	//vector<int> shell = { 45,35,80,75,60,90,70 };
-	vector<int> shell = { 45,35,80,75,60,90,70,75,55,90,85,34,45,62,57 };
-	vector<int> oddEven = { 45,35,80,75,60,90,70,75,55,90,85,34,45,62,57 };
-	vector<int> radix = { 249,435,890,979,360,90,170,75,253,90,588,34,442,682,557 };
+	vector<int> select = { 170, 45, 75, 90, 802, 24, 2, 66 };
+	vector<int> insert = { 170, 45, 75, 90, 802, 24, 2, 66 };
+	vector<int> bubble = { 170, 45, 75, 90, 802, 24, 2, 66 };
+	vector<int> quick = { 170, 45, 75, 90, 802, 24, 2, 66 };
+	vector<int> merge = { 170, 45, 75, 90, 802, 24, 2, 66 };
+	vector<int> shell = { 170, 45, 75, 90, 802, 24, 2, 66 };
+	vector<int> oddEven = { 170, 45, 75, 90, 802, 24, 2, 66 };
+	vector<int> radix = { 170, 45, 75, 90, 802, 24, 2, 66 };
+	//vector<int> shell   = { 45,35,80,75,60,90,70,75,55,90,85,34,45,62,57 };
+	//vector<int> oddEven = { 45,35,80,75,60,90,70,75,55,90,85,34,45,62,57 };
+	//vector<int> radix = { 45,35,80,75,60,90,70,75,55,90,85,34,45,62,57 };
+	
+
 	//SelectionSort(select);
 	//InsertionSort(insert);
 	//BubbleSort(bubble);
 	//QuickSort(quick, 0, select.size() - 1);
 	//MergeSort(merge);
-	//ShellSort(shell);
-	//OddEven(oddEven);
+	ShellSort(shell);
+	OddEven(oddEven);
 	RadixSort(radix);
 }
 

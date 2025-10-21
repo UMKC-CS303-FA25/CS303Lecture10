@@ -31,12 +31,14 @@ int main() {
 	//vector<int> shell = { 45,35,80,75,60,90,70 };
 	vector<int> shell = { 45,35,80,75,60,90,70,75,55,90,85,34,45,62,57 };
 	vector<int> oddEven = { 45,35,80,75,60,90,70,75,55,90,85,34,45,62,57 };
+	vector<int> radix = { 249,435,890,979,360,90,170,75,253,90,588,34,442,682,557 };
 	//SelectionSort(select);
 	//InsertionSort(insert);
 	//BubbleSort(bubble);
 	//QuickSort(quick, 0, select.size() - 1);
 	//MergeSort(merge);
 	//ShellSort(shell);
-	OddEven(oddEven);
+	//OddEven(oddEven);
+	RadixSort(radix);
 }
 

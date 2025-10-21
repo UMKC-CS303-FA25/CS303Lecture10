@@ -46,3 +46,8 @@ void ShellSort(vector<int>& v1);
 //PRE:  vector loaded with int values 
 //POST: sorts the given vector using shell sort
 void OddEven(vector<int>& v1);
+
+
+//PRE:  vector loaded with int values 
+//POST: sorts the given vector using radix sort
+void RadixSort(vector<int>& v1);

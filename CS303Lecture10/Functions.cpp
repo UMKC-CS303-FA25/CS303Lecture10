@@ -305,11 +305,11 @@ void ShellSort(vector<int>& v1) {
         cout << "\nGAP: " << gap << endl;
 
         for (int i = gap; i < n; i++) {
-            cout << "i = " << i << " " << v1[i] << " ";
             int temp = v1[i];
             int j;
             for (j = i; j >= gap && v1[j - gap] > temp; j -= gap) {
                 v1[j] = v1[j - gap];
+                cout << "i = " << i << " " << v1[i] << " ";
                 cout << "j = " << j << " " << v1[j] << endl;
             }
             v1[j] = temp;
@@ -341,4 +341,14 @@ void OddEven(vector<int>& v1) {
         printl(v1);
         cout << endl;
     }
+}
+
+void RadixSort(vector<int>& v1) {
+
+    int bucketCount = 10;
+    int maxValue = 999;
+
+    vector<vector<int>> buckets;
+
+   
 }

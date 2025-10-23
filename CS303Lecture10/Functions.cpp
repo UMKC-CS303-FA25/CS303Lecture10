@@ -211,9 +211,35 @@ void BubbleSort(vector<int>& v1) {
        quick(v1,  p+1, end)
   }
 */
+int partition(vector<int>& v1, int start, int end) {
+    int pivot = v1.at(end);
+    int i = start - 1;
+
+    for (int j = start; j < end; j++) {
+        if (v1.at(j) <= pivot) {
+            i++;
+            // Swap list[i] and list[j]
+            swap (v1.at(i), v1.at(j));
+        }
+    }
+
+    // Swap v1[i+1] and v1[high] (pivot)
+    swap(v1.at(i + 1), v1.at(end));
+
+    return i + 1;
+}
+
 void QuickSort(vector<int>& v1, int start, int end) {
-    cout << "\n\nQUICK SORT\n";
-    cout << "CODE THIS\n";
+    //cout << "\n\nQUICK SORT\n";
+    //cout << "CODE THIS\n";
+    if (start < end) {
+        cout << "  Pivot: " << v1.at(end) << " Start: " << start << " End: " << end << endl;
+        int pi = partition(v1, start, end);
+        printl(v1);
+        // Recursively sort the sublists
+        QuickSort(v1, start, pi - 1);
+        QuickSort(v1, pi + 1, end);
+    }
 }
 
 //MERGE SORT
@@ -246,6 +272,7 @@ void QuickSort(vector<int>& v1, int start, int end) {
 
 //function sorts using mergesort.
 vector<int> MergeSort(vector<int> avector) {
+    cout << "\n\nMERGE SORT\n";
     cout << "Splitting ";
     printl(avector);
     if (avector.size() > 1) {
@@ -309,17 +336,19 @@ void ShellSort(vector<int>& v1) {
             int j;
             for (j = i; j >= gap && v1[j - gap] > temp; j -= gap) {
                 v1[j] = v1[j - gap];
-                cout << "i = " << i << " " << v1[i] << " ";
-                cout << "j = " << j << " " << v1[j] << endl;
+                cout << "SWAP:   = " << temp << " & " << v1[j - gap] << endl;
             }
             v1[j] = temp;
+            cout << "INNER:  = ";
             printl(v1);
         }
+        cout << "OUTER:  = ";
         printl(v1);
     }
 }
 
 void OddEven(vector<int>& v1) {
+    cout << "\n\nODD EVEN SORT \n";
     bool sorted = false;
     while (!sorted) {
         printl(v1);
@@ -344,7 +373,7 @@ void OddEven(vector<int>& v1) {
 }
 
 void RadixSort(vector<int>& v1) {
-
+    cout << "\n\nRADIX SORT \n";
     int bucketCount = 10;
     int maxValue = 999;
 

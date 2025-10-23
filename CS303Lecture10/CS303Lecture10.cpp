@@ -27,7 +27,7 @@ int main() {
 	vector<int> insert = { 170, 45, 75, 90, 802, 24, 2, 66 };
 	vector<int> bubble = { 170, 45, 75, 90, 802, 24, 2, 66 };
 	vector<int> quick = { 170, 45, 75, 90, 802, 24, 2, 66 };
-	vector<int> merge = { 170, 45, 75, 90, 802, 24, 2, 66 };
+	vector<int> merge = { 170, 45, 75, 90, 802, 24, 2, 66, 92 };
 	vector<int> shell = { 170, 45, 75, 90, 802, 24, 2, 66 };
 	vector<int> oddEven = { 170, 45, 75, 90, 802, 24, 2, 66 };
 	vector<int> radix = { 170, 45, 75, 90, 802, 24, 2, 66 };
@@ -36,13 +36,16 @@ int main() {
 	//vector<int> radix = { 45,35,80,75,60,90,70,75,55,90,85,34,45,62,57 };
 	
 
-	//SelectionSort(select);
-	//InsertionSort(insert);
-	//BubbleSort(bubble);
-	//QuickSort(quick, 0, select.size() - 1);
-	//MergeSort(merge);
+	SelectionSort(select);
+	InsertionSort(insert);
+	BubbleSort(bubble);
+
+	cout << "\n\nQUICK SORT\n";
+	QuickSort(quick, 0, quick.size() - 1);
+	MergeSort(merge);
 	ShellSort(shell);
 	OddEven(oddEven);
+	
 	RadixSort(radix);
 }
 
